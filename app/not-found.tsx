@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { headers } from 'next/headers';
 
-export default function Home() {
+export default function NotFound() {
   const headersList = headers();
   const referer = headersList.get('x-subdomain');
   return (
@@ -11,6 +11,7 @@ export default function Home() {
           Subdomain: <code className="font-mono font-bold">{referer}</code>
         </p>
       </div>
+        <span>Error not found</span>
     </main>
   )
 }
